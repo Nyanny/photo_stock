@@ -67,9 +67,9 @@ class UserDTO {
 class UrlsDTO {
   /// Urls' user
   /// This is the direct URL of the image.
-  String regular;
+  final String regular;
 
-  UrlsDTO({
+  const UrlsDTO({
     required this.regular,
   });
 
