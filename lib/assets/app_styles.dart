@@ -11,8 +11,24 @@ class AppTextStyles {
     fontWeight: FontWeight.w700,
   );
 
-  /// [manrope16h22Black] defines manrope font with color black, font size 16, line height 22, font weight 700
-  static final manrope16h22Black = GoogleFonts.manrope(
+  /// [manrope24h33w700Black] defines manrope font with color white, font size 24, line height 33, font weight 700
+  static final manrope24h33w700Black = GoogleFonts.manrope(
+    color: Colors.black,
+    fontSize: 24.0,
+    height: 33 / 24,
+    fontWeight: FontWeight.w700,
+  );
+
+  /// [manrope20h27w700Black] defines manrope font with color white, font size 20, line height 27, font weight 700
+  static final manrope20h27w700Black = GoogleFonts.manrope(
+    color: Colors.black,
+    fontSize: 20.0,
+    height: 27 / 20,
+    fontWeight: FontWeight.w700,
+  );
+
+  /// [manrope16h22w700Black] defines manrope font with color black, font size 16, line height 22, font weight 700
+  static final manrope16h22w700Black = GoogleFonts.manrope(
     color: Colors.black,
     fontSize: 16.0,
     height: 22 / 16,
