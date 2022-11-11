@@ -28,41 +28,40 @@ class DetailedPhotoScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       extendBodyBehindAppBar: true,
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+      body: Stack(
         children: [
-          Stack(
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              ClipRRect(
-                borderRadius: const BorderRadius.only(
-                  bottomRight: Radius.circular(32.0),
-                  bottomLeft: Radius.circular(32.0),
-                ),
-                child: SizedBox(
-                  width: 394,
-                  height: 372,
+              SizedBox(
+                height: 372,
+                child: ClipRRect(
+                  borderRadius: const BorderRadius.only(
+                    bottomRight: Radius.circular(32.0),
+                    bottomLeft: Radius.circular(32.0),
+                  ),
                   child: CachedNetworkImage(
                     fit: BoxFit.fill,
                     imageUrl: url,
                   ),
                 ),
               ),
-              const Positioned(
-                left: 18,
-                top: 50,
-                child: BackButtonWidget(),
-              )
+              Padding(
+                padding: const EdgeInsets.only(left: 26, top: 22),
+                child: DetailsTextWidget(
+                  title: title,
+                  titleStyle: AppTextStyles.manrope32h44w700Black,
+                  subTitle: subtitle,
+                  subtitleStyle: AppTextStyles.manrope16h22w700Black,
+                ),
+              ),
             ],
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 16, top: 22),
-            child: DetailsTextWidget(
-              title: title,
-              titleStyle: AppTextStyles.manrope32h44w700Black,
-              subTitle: subtitle,
-              subtitleStyle: AppTextStyles.manrope16h22w700Black,
-            ),
-          ),
+          const Positioned(
+            left: 18,
+            top: 50,
+            child: BackButtonWidget(),
+          )
         ],
       ),
     );
