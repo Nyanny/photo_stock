@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:photo_stock/assets/themes.dart';
+import 'package:photo_stock/feature/screens/photos_list_screen.dart';
+
 import 'feature/di/getit_di.dart';
 
 /// App's entry point.
@@ -13,16 +16,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: MyHomePage(),
+      theme: AppTheme.appTheme,
+      home: const PhotosListScreen(),
     );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  MyHomePage({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold();
   }
 }
