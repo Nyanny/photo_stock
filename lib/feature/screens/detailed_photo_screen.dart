@@ -1,5 +1,4 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:photo_stock/assets/app_styles.dart';
 import 'package:photo_stock/widgets/back_button_widget.dart';
@@ -39,8 +38,13 @@ class DetailedPhotoScreen extends StatelessWidget {
                   bottomRight: Radius.circular(32.0),
                   bottomLeft: Radius.circular(32.0),
                 ),
-                child: CachedNetworkImage(
-                  imageUrl: url,
+                child: SizedBox(
+                  width: 394,
+                  height: 372,
+                  child: CachedNetworkImage(
+                    fit: BoxFit.fill,
+                    imageUrl: url,
+                  ),
                 ),
               ),
               const Positioned(
@@ -56,7 +60,7 @@ class DetailedPhotoScreen extends StatelessWidget {
               title: title,
               titleStyle: AppTextStyles.manrope32h44w700Black,
               subTitle: subtitle,
-              subtitleStyle: AppTextStyles.manrope16h22Black,
+              subtitleStyle: AppTextStyles.manrope16h22w700Black,
             ),
           ),
         ],
