@@ -30,9 +30,11 @@ class PhotoGridItem extends StatelessWidget {
         ),
         child: Stack(
           children: [
-            _CardPicture(
-              hash: photo.blurHash,
-              url: photo.urls,
+            Positioned.fill(
+              child: _CardPicture(
+                hash: photo.blurHash,
+                url: photo.urls,
+              ),
             ),
             _CardText(
               title: photo.user,
@@ -65,16 +67,12 @@ class _CardPicture extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 158,
-      width: 158,
-      child: CachedNetworkImage(
-        fit: BoxFit.fill,
-        placeholder: (context, url) => BlurHash(
-          hash: hash,
-        ),
-        imageUrl: url,
+    return CachedNetworkImage(
+      fit: BoxFit.fill,
+      placeholder: (context, url) => BlurHash(
+        hash: hash,
       ),
+      imageUrl: url,
     );
   }
 }
