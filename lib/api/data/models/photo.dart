@@ -9,7 +9,8 @@ class Photo {
   final String color;
 
   /// Photos' blurHash
-  final String blurHash;
+  /// Can be null sometimes
+  final String? blurHash;
 
   /// Photos' likes
   final int likes;
