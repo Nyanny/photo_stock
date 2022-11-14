@@ -59,7 +59,7 @@ class PhotoGridItem extends StatelessWidget {
 }
 
 class _CardPicture extends StatelessWidget {
-  final String hash;
+  final String? hash;
   final String url;
 
   const _CardPicture({Key? key, required this.hash, required this.url})
@@ -69,9 +69,14 @@ class _CardPicture extends StatelessWidget {
   Widget build(BuildContext context) {
     return CachedNetworkImage(
       fit: BoxFit.fill,
-      placeholder: (context, url) => BlurHash(
-        hash: hash,
-      ),
+      placeholder: (context, url) {
+        if (!(hash == null)) {
+          return BlurHash(
+            hash: hash!,
+          );
+        }
+        return Container(color: Theme.of(context).scaffoldBackgroundColor,);
+      },
       imageUrl: url,
     );
   }
