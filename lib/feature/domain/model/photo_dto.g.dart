@@ -9,7 +9,7 @@ part of 'photo_dto.dart';
 PhotoDTO _$PhotoDTOFromJson(Map<String, dynamic> json) => PhotoDTO(
       id: json['id'] as String,
       color: json['color'] as String,
-      blurHash: json['blur_hash'] as String,
+      blurHash: json['blur_hash'] as String?,
       likes: json['likes'] as int,
       urls: UrlsDTO.fromJson(json['urls'] as Map<String, dynamic>),
       user: UserDTO.fromJson(json['user'] as Map<String, dynamic>),

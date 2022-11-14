@@ -17,8 +17,9 @@ class PhotoDTO {
   final String color;
 
   /// Photos' blurHash
+  /// Can be null sometimes
   @JsonKey(name: 'blur_hash')
-  final String blurHash;
+  final String? blurHash;
 
   /// Photos' likes
   final int likes;
