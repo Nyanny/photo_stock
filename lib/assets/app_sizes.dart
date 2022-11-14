@@ -5,4 +5,7 @@ class AppSizes {
 
   /// padding constant for grid items
   static const paddingGridItems = 24.0;
+
+  /// Loading cupertino indicator size
+  static const cupertinoIndicatorSize = 22.0;
 }
