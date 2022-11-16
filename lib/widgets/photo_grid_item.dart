@@ -68,6 +68,9 @@ class _CardPicture extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CachedNetworkImage(
+      errorWidget: (context, url, error) => Container(
+        color: Colors.grey,
+      ),
       fit: BoxFit.fill,
       placeholder: (context, url) {
         if (!(hash == null)) {
@@ -75,7 +78,9 @@ class _CardPicture extends StatelessWidget {
             hash: hash!,
           );
         }
-        return Container(color: Theme.of(context).scaffoldBackgroundColor,);
+        return Container(
+          color: Theme.of(context).scaffoldBackgroundColor,
+        );
       },
       imageUrl: url,
     );
