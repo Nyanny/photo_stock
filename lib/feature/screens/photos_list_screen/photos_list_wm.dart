@@ -4,7 +4,7 @@ import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 import 'package:photo_stock/api/data/models/photo.dart';
 import 'package:photo_stock/api/data/repository/photo_repository.dart';
 import 'package:photo_stock/feature/screens/photos_list_screen/photos_list_model.dart';
-import 'package:photo_stock/feature/screens/photos_list_screen/photos_list_screen2.dart';
+import 'package:photo_stock/feature/screens/photos_list_screen/photos_list_screen.dart';
 
 /// WidgetModel for [PhotosListScreen] and [PhotosListModel]
 /// Provides [maxHeight] and [minHeight]
