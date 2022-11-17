@@ -47,6 +47,7 @@ class PhotosListWM extends WidgetModel<PhotosListScreen, PhotosListModel>
     try {
       final photos = await model.getPhotos(_pageNumber);
       _pageNumber++;
+
       final isLastPage = photos.length < 10;
       if (!isLastPage) {
         _pagingController.appendPage(photos, _pageNumber);
