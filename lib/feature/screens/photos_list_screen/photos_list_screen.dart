@@ -17,9 +17,8 @@ class PhotosListScreen extends ElementaryWidget<IPhotosListWm> {
   Widget build(IPhotosListWm wm) {
     return Scaffold(
       body: RefreshIndicator(
-        onRefresh: () => wm.refresh(),
+        onRefresh: wm.refresh,
         child: CustomScrollView(
-          // controller: wm.scrollController,
           slivers: <Widget>[
             CustomAppBar(
               maxHeight: wm.maxHeight,
